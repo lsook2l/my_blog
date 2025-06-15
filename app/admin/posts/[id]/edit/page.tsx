@@ -7,7 +7,7 @@ import { notFound, redirect } from 'next/navigation';
 import { auth } from '@clerk/nextjs/server';
 import { createServerSupabaseClient } from '@/lib/supabase-server';
 import PostEditForm from '@/components/admin/post-edit-form';
-import { Database } from '@/types/database.types';
+import { Database } from '@/types/database.types.ts';
 
 // 타입 정의
 type Post = Database['public']['Tables']['posts']['Row'];

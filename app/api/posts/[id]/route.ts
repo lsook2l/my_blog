@@ -219,8 +219,8 @@ export async function PUT(
     // 캐시 재검증
     revalidatePath('/posts');
     revalidatePath(`/posts/${updateData.slug}`);
-    if (updateData.categoryId) {
-      revalidatePath(`/categories/${updateData.categoryId}`);
+    if (updateData.category_id) {
+      revalidatePath(`/categories/${updateData.category_id}`);
     }
     revalidatePath('/');
 
