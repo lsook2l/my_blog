@@ -23,6 +23,7 @@ export default clerkMiddleware(async (auth, request) => {
     '/',
     '/sign-in',
     '/sign-up',
+    '/_not-found',
   ]
 
   // 공개 API 경로들 (GET 요청만)
