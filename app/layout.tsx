@@ -22,14 +22,14 @@ const notoSansKR = Noto_Sans_KR({
 // SEO 메타데이터 설정
 export const metadata: Metadata = {
   title: {
-    default: "My Blog - 웹 개발 기술 블로그",
-    template: "%s | My Blog",
+    default: "Sook's Blog - 자기계발 성장 블로그",
+    template: "%s | Sook's Blog",
   },
-  description: "웹 개발, JavaScript, React, Next.js에 관한 기술 블로그입니다. 최신 개발 트렌드와 실무 경험을 공유합니다.",
-  keywords: ["웹 개발", "JavaScript", "React", "Next.js", "TypeScript", "프론트엔드", "기술 블로그"],
-  authors: [{ name: "My Blog Team" }],
-  creator: "My Blog",
-  publisher: "My Blog",
+  description: "자기계발, 심리학&뇌과학, 생산성 향상, 습관 형성에 관한 개인 블로그입니다. 제가 경험한 다양한 자기계발 방법과 도구들을 공유하며, 독자들과 함께 성장하는 것을 목표로 합니다.",
+  keywords: ["자기계발", "심리학", "뇌과학", "생산성", "습관", "성장", "독서", "시간 관리", "마음챙김", "라이프스타일", "디지털 웰빙"],
+  authors: [{ name: "Sook's Blog Team" }],
+  creator: "Sook's Blog",
+  publisher: "Sook's Blog",
   formatDetection: {
     email: false,
     address: false,
@@ -42,15 +42,15 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ko_KR",
     url: "/",
-    title: "My Blog - 웹 개발 기술 블로그",
-    description: "웹 개발, JavaScript, React, Next.js에 관한 기술 블로그입니다.",
-    siteName: "My Blog",
+    title: "Sook's Blog - 자기계발 성장 블로그",
+    description: "자기계발, 심리학&뇌과학, 생산성 향상, 습관 형성에 관한 개인 블로그입니다.",
+    siteName: "Sook's Blog",
     images: [
       {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "My Blog",
+        alt: "Sook's Blog",
       },
     ],
   },
@@ -58,10 +58,10 @@ export const metadata: Metadata = {
   // Twitter Card 설정
   twitter: {
     card: "summary_large_image",
-    title: "My Blog - 웹 개발 기술 블로그",
-    description: "웹 개발, JavaScript, React, Next.js에 관한 기술 블로그입니다.",
+    title: "Sook's Blog - 자기계발 성장 블로그",
+    description: "자기계발, 심리학&뇌과학, 생산성 향상, 습관 형성에 관한 개인 블로그입니다.",
     images: ["/images/og-image.jpg"],
-    creator: "@myblog",
+    creator: "@sook's blog",
   },
   
   // 기타 메타데이터
@@ -119,16 +119,16 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Blog",
-              "name": "My Blog",
-              "description": "웹 개발, JavaScript, React, Next.js에 관한 기술 블로그",
+              "name": "Sook's Blog",
+              "description": "자기계발, 심리학&뇌과학, 생산성 향상, 습관 형성에 관한 개인 블로그",
               "url": process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
               "author": {
                 "@type": "Organization",
-                "name": "My Blog Team"
+                "name": "Sook's Blog Team"
               },
               "publisher": {
                 "@type": "Organization",
-                "name": "My Blog",
+                "name": "Sook's Blog",
                 "logo": {
                   "@type": "ImageObject",
                   "url": `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/images/logo.png`
