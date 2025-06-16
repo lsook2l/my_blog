@@ -4,25 +4,49 @@ Next.js, Clerk, Supabase를 사용한 개인 블로그 프로젝트입니다.
 
 ## 📖 프로젝트 소개
 
-웹 개발, JavaScript, React, Next.js에 관한 기술 블로그입니다. 최신 개발 트렌드와 실무 경험을 공유합니다.
+자기계발, 생산성 향상, 습관 형성에 관한 개인 블로그입니다. 제가 경험한 다양한 자기계발 방법과 도구들을 공유하며, 독자들과 함께 성장하는 것을 목표로 합니다.
+
+### 주요 주제
+- 📚 독서와 학습 방법
+- ⏰ 시간 관리와 생산성 향상
+- 🎯 목표 설정과 습관 형성
+- 💡 창의력과 문제 해결
+- 🧘 마음챙김과 정신 건강
+- 🏃 건강한 라이프스타일
+- 💻 디지털 웰빙과 기술 활용
+
+### 블로그의 특징
+- 실천 가능한 자기계발 팁과 전략
+- 개인적인 경험과 성공/실패 사례
+- 과학적으로 검증된 방법론 소개
+- 독자들과의 활발한 소통
+- 정기적인 자기계발 챌린지
+- 추천 도구와 리소스 공유
 
 ## 🚀 기술 스택
 
--   **Frontend**: Next.js 14, TypeScript, Tailwind CSS
--   **Authentication**: Clerk
+-   **Frontend**: Next.js 15, React 19, TypeScript
+-   **Authentication**: Clerk 6.20
 -   **Database**: Supabase (PostgreSQL)
--   **Styling**: Tailwind CSS, shadcn/ui
+-   **Styling**: Tailwind CSS 3.4, shadcn/ui
 -   **Markdown**: react-markdown, rehype, remark
+-   **UI Components**: Radix UI
+-   **Form Handling**: react-hook-form, zod
+-   **Date Handling**: date-fns
+-   **Charts**: recharts
+-   **Animations**: tailwindcss-animate
 
 ## 📋 주요 기능
 
 -   ✅ 블로그 포스트 작성/수정/삭제
 -   ✅ 카테고리 관리
--   ✅ 마크다운 지원
+-   ✅ 마크다운 지원 (코드 하이라이팅 포함)
 -   ✅ 반응형 디자인
 -   ✅ SEO 최적화
 -   ✅ 이미지 업로드 및 최적화
 -   ✅ 사용자 인증 (Clerk)
+-   ✅ 다크 모드 지원
+-   ✅ 실시간 검색 (Cmd/Ctrl + K)
 -   🔄 댓글 시스템 (예정)
 -   🔄 태그 시스템 (예정)
 
@@ -31,40 +55,50 @@ Next.js, Clerk, Supabase를 사용한 개인 블로그 프로젝트입니다.
 ### 📱 반응형 디자인
 
 -   모바일, 태블릿, 데스크톱 완벽 대응
--   Tailwind CSS를 활용한 현대적 UI/UX
+-   Tailwind CSS 3.4를 활용한 현대적 UI/UX
+-   Radix UI 컴포넌트 기반 접근성 지원
+-   다크 모드 지원
 
 ### 🔍 검색 기능
 
--   실시간 검색 다이얼로그 (`Ctrl+K`)
+-   실시간 검색 다이얼로그 (`Cmd/Ctrl + K`)
 -   제목, 내용, 태그 전체 검색
 -   검색어 하이라이팅
 -   고급 필터링 및 정렬
+-   검색 결과 애니메이션
 
 ### ❤️ 좋아요 시스템
 
 -   포스트별 좋아요 기능
--   로컬 스토리지 기반 사용자 상태 관리
+-   Supabase 실시간 업데이트
 -   부드러운 애니메이션 효과
 -   접근성 지원
+-   좋아요 수 실시간 동기화
 
 ### 💬 댓글 시스템
 
 -   댓글 작성 및 답글 기능
--   실시간 업데이트
--   폼 유효성 검사
+-   Supabase 실시간 업데이트
+-   react-hook-form 기반 폼 유효성 검사
+-   zod를 통한 데이터 검증
+-   마크다운 지원
 
 ### 📝 포스트 관리
 
 -   마크다운 기반 콘텐츠
--   코드 하이라이팅
+-   코드 하이라이팅 (highlight.js)
 -   카테고리 및 태그 분류
 -   관련 포스트 추천
+-   이미지 최적화 (Next.js Image)
+-   SEO 최적화
 
 ### 🎨 컴포넌트 시스템
 
 -   재사용 가능한 PostCard 컴포넌트
 -   다양한 변형 (Featured, Compact, Related)
 -   shadcn/ui 기반 디자인 시스템
+-   Radix UI 프리미티브 활용
+-   애니메이션 효과 (tailwindcss-animate)
 
 ## 🛠️ 설치 및 실행
 
@@ -160,7 +194,7 @@ npm run dev
 ## 📁 프로젝트 구조
 
 ```
-├── app/                 # Next.js App Router
+├── app/                 # Next.js 15 App Router
 │   ├── (auth)/         # 인증 관련 페이지
 │   ├── admin/          # 관리자 페이지
 │   ├── api/            # API 라우트
@@ -171,6 +205,9 @@ npm run dev
 │   ├── ui/            # UI 컴포넌트 (shadcn/ui)
 │   └── admin/         # 관리자 컴포넌트
 ├── lib/               # 유틸리티 함수 및 설정
+│   ├── supabase/     # Supabase 클라이언트
+│   ├── clerk/        # Clerk 설정
+│   └── utils/        # 유틸리티 함수
 ├── types/             # TypeScript 타입 정의
 ├── docs/              # 문서 및 스키마
 ├── scripts/           # 데이터베이스 관리 스크립트
@@ -179,38 +216,53 @@ npm run dev
 
 ## 🔐 인증 시스템
 
-Clerk를 사용한 사용자 인증:
+Clerk 6.20을 사용한 사용자 인증:
 
 -   이메일/비밀번호 로그인
 -   소셜 로그인 (Google, GitHub 등)
 -   보호된 관리자 페이지
 -   Supabase RLS와 연동
+-   사용자 프로필 관리
+-   세션 관리
 
 ## 📝 포스트 작성
 
 1. `/admin/post/new`에서 새 포스트 작성
 2. 마크다운 문법 지원
+   - 코드 하이라이팅
+   - 수학 수식
+   - 테이블
+   - 체크리스트
 3. 카테고리 선택
-4. 커버 이미지 업로드 (선택사항)
-5. 미리보기 기능
+4. 커버 이미지 업로드 (Next.js Image 최적화)
+5. 실시간 미리보기
+6. 자동 저장 기능
 
 ## 🎨 커스터마이징
 
-### 테마 색상
+### 테마 설정
 
-`tailwind.config.ts`에서 색상 팔레트 수정 가능
+-   `tailwind.config.ts`에서 색상 팔레트 수정
+-   다크 모드 지원
+-   커스텀 애니메이션
+-   반응형 디자인 설정
 
 ### 컴포넌트 스타일
 
-`components/` 폴더의 각 컴포넌트에서 스타일 커스터마이징
+-   `components/` 폴더의 각 컴포넌트에서 스타일 커스터마이징
+-   shadcn/ui 테마 커스터마이징
+-   Radix UI 프리미티브 활용
 
 ## 📚 참고 자료
 
--   [Next.js 문서](https://nextjs.org/docs)
+-   [Next.js 15 문서](https://nextjs.org/docs)
 -   [Clerk 문서](https://clerk.com/docs)
 -   [Supabase 문서](https://supabase.com/docs)
--   [Tailwind CSS](https://tailwindcss.com/docs)
+-   [Tailwind CSS 3.4](https://tailwindcss.com/docs)
 -   [shadcn/ui](https://ui.shadcn.com/)
+-   [Radix UI](https://www.radix-ui.com/)
+-   [React Hook Form](https://react-hook-form.com/)
+-   [Zod](https://zod.dev/)
 
 ## 🤝 기여하기
 
